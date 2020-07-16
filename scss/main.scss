@@ -1,0 +1,127 @@
+// 1. npm --version | check if npm is installed
+// 2. npm init | create the package.json file
+// 3. npm install node-sass -D | add the node sass DevDependencies
+
+// sections of sass
+@import "config";
+@import "utilities";
+@import "item_grid";
+
+// General Styles
+* {
+  margin: 0;
+  padding: 0;
+  // box-sizing: border-box;
+}
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+
+// Logo
+#logo {
+  width: 150px;
+  height: 70px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+// Main Nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid; // set transparent and then display when hover, so the border will not put the text up when hover
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+    &:hover {
+      border-color: $medium-color;
+    }
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+// Header
+#header {
+  // Header Home
+  &-home {
+    background: $bg-image no-repeat center right/cover;
+    height: 100vh;
+    color: #fff;
+
+    // Header Content
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+  //  Header Inner
+  &-inner {
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
+  }
+}
+
+// Footer
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background: $main-color;
+      }
+    }
+  }
+}
+
+// Import Media Queries
+@import "media";
