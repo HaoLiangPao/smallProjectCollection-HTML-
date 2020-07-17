@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
-  background: #224941 url("../../img/bg.jpg") no-repeat center center/cover;
+  background: #224941 url("../resources/img/16_relaxer/bg.jpg") no-repeat center
+    center/cover;
   min-height: 100vh;
   overflow: hidden;
   display: flex;
@@ -12,67 +14,91 @@ body {
   color: #fff;
   font-family: "Monserrat", sans-serif;
   margin: 0;
-  font-size: 20px; }
-  body .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    height: 300px;
-    width: 300px;
-    position: relative; }
-    body .container.grow {
-      animation: grow 3s linear forwards; }
+  font-size: 20px;
+}
+body .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+body .container.grow {
+  animation: grow 3s linear forwards;
+}
 
 @keyframes grow {
   from {
-    transform: scale(1); }
+    transform: scale(1);
+  }
   to {
-    transform: scale(1.2); } }
-    body .container.shrink {
-      animation: shrink 3s linear forwards; }
+    transform: scale(1.2);
+  }
+}
+body .container.shrink {
+  animation: shrink 3s linear forwards;
+}
 
 @keyframes shrink {
   from {
-    transform: scale(1.2); }
+    transform: scale(1.2);
+  }
   to {
-    transform: scale(1); } }
-    body .container .circle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: #212f3c;
-      border-radius: 50%;
-      z-index: -1;
-      transition: all 0.3s ease-in-out; }
-    body .container .gradient-circle {
-      background: conic-gradient(#2e86c1 0%, #5dade2 40%, #aed6f1 40%, #85c1e9 60%, #3498db 60%, #2874a6 100%);
-      height: 320px;
-      width: 320px;
-      border-radius: 50%;
-      z-index: -2;
-      position: absolute;
-      top: -10px;
-      left: -10px; }
-    body .container .pointer-container {
-      position: absolute;
-      top: -40px;
-      left: 140px;
-      width: 20px;
-      height: 190px;
-      animation: rotate 7.3s linear forwards infinite;
-      transform-origin: bottom center; }
+    transform: scale(1);
+  }
+}
+body .container .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #212f3c;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+body .container .gradient-circle {
+  background: conic-gradient(
+    #2e86c1 0%,
+    #5dade2 40%,
+    #aed6f1 40%,
+    #85c1e9 60%,
+    #3498db 60%,
+    #2874a6 100%
+  );
+  height: 320px;
+  width: 320px;
+  border-radius: 50%;
+  z-index: -2;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+body .container .pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 190px;
+  animation: rotate 7.3s linear forwards infinite;
+  transform-origin: bottom center;
+}
 
 @keyframes rotate {
   from {
-    transform: rotate(0deg); }
+    transform: rotate(0deg);
+  }
   to {
-    transform: rotate(360deg); } }
-      body .container .pointer-container .pointer {
-        background-color: #fff;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        display: block; }
+    transform: rotate(360deg);
+  }
+}
+body .container .pointer-container .pointer {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: block;
+}
